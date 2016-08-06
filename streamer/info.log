@@ -1,0 +1,1 @@
+gcc -o streamer src/ADTSLiveCapture.o src/H264LiveCapture.o -I. -I./include -I/usr/local/include  -L/lib -L/usr/lib -L/usr/local/lib -lx264 -lavcodec -lliveMedia -lgroupsock -lBasicUsageEnvironment -lUsageEnvironment -lavutil -lavfilter -lavdevice -lavformat -lswscale -lswresample -lpostproc -lpthread -lrt -lm
