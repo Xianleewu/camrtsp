@@ -73,8 +73,8 @@ int main(int argc, char** argv)
         "webcam", 0, "Camera server, streamed by Xianleewu");   
     sms->addSubsession(H264LiveServerMediaSubsession::createNew(*env, 
         videoDevice, VIDEO_WIDTH, VIDEO_HEIGTH, FRAME_PER_SEC)); 
-    //~ sms->addSubsession(ADTSLiveServerMediaSubsession::createNew(*env,
-        //~ "hw:0,0", AUDIO_SAMPLE_RATE, AUDIO_NUM_CHANNEL));
+    sms->addSubsession(ADTSLiveServerMediaSubsession::createNew(*env,
+        "hw:0,0", AUDIO_SAMPLE_RATE, AUDIO_NUM_CHANNEL));
     rtspServer->addServerMediaSession(sms);  
 
     char* url = rtspServer->rtspURL(sms);  
